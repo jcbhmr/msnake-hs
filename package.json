@@ -1,0 +1,35 @@
+{
+    "name": "snake",
+    "version": "0.0.1",
+    "description": "TODO",
+    "main": "build/index.js",
+    "author": "Jacob Hummer",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "deepcopy": "*",
+        "express": "*",
+        "socket.io": "*"
+    },
+    "devDependencies": {
+        "@types/express": "*",
+        "@types/socket.io": "*",
+        "browserify": "*",
+        "server": "https://gitlab.com/wildpigs/npm-server.git#build",
+        "tslint": "*",
+        "typescript": "*",
+        "uglify-es": "*"
+    },
+    "scripts": {
+        "web": "yarn server",
+        "preweb": "yarn build || true",
+        "prebuild": "yarn lint || true",
+        "build": "yarn build:source && yarn build:client",
+        "build:source": "tsc --project source/tsconfig.json",
+        "build:client": "tsc --project source/client/tsconfig.json",
+        "postbuild:client": "yarn bundle",
+        "bundle": "browserify build/client/index.js -o build/client/bundle.js",
+        "postbundle": "uglifyjs build/client/bundle.js --compress --mangle --output build/client/bundle.min.js",
+        "lint": "tslint --project tslint.json --fix"
+    }
+}

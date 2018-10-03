@@ -1,0 +1,25 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "charset": "utf-8",
+        "lib": [
+            "es2018"
+        ],
+        "newLine": "lf",
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "moduleResolution": "node",
+        "downlevelIteration": true,
+        "target": "es2018",
+        "module": "commonjs"
+    }
+}
