@@ -9,13 +9,13 @@
     "dependencies": {
         "deepcopy": "*",
         "express": "*",
+        "server": "https://gitlab.com/wildpigs/npm-server.git#build",
         "socket.io": "*"
     },
     "devDependencies": {
         "@types/express": "*",
         "@types/socket.io": "*",
         "browserify": "*",
-        "server": "https://gitlab.com/wildpigs/npm-server.git#build",
         "tslint": "*",
         "typescript": "*",
         "uglify-es": "*"
